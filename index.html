@@ -1,1 +1,361 @@
-<p>Under Constructing...</p>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TextPSG</title>
+    <!-- Bootstrap -->
+    <link rel="preconnect" href="https://rsms.me/">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css"> -->
+    <style>
+      body {
+        background: rgb(255, 255, 255) no-repeat fixed top left; 
+        font-family: "Inter", 'Open Sans', sans-serif;
+      }
+    </style>
+
+  </head>
+
+  <!-- cover -->
+  <section>
+    <div class="jumbotron text-center mt-0">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col">
+            <h2 style="font-size:30px;">TextPSG: Panoptic Scene Graph Generation from Textual Descriptions</h2>
+            <h4 style="color:#6e6e6e;"> ICCV 2023 </h4>
+            <hr>
+            <h6> 
+              <a href="https://chengyzhao.github.io" target="_blank">Chengyang Zhao</a><sup>1</sup>&nbsp; &nbsp;
+              <a href="https://scholar.google.com/citations?user=qff5rRYAAAAJ&hl=en" target="_blank">Yikang Shen</a><sup>2</sup> &nbsp; &nbsp;
+              <a href="https://zfchenunique.github.io" target="_blank">Zhenfang Chen</a><sup>2</sup>&nbsp; &nbsp;
+              <a href="https://dingmyu.github.io" target="_blank">Mingyu Ding</a><sup>3</sup> &nbsp; &nbsp;
+              <a href="https://people.csail.mit.edu/ganchuang" target="_blank">Chuang Gan</a><sup>2,4</sup> &nbsp; &nbsp;
+              <br>
+              <br>
+            <p> 
+              <sup>1</sup>Peking University&nbsp; &nbsp; 
+              <sup>2</sup>MIT-IBM Watson AI Lab&nbsp; &nbsp;  
+              <sup>3</sup>UC Berkley&nbsp; &nbsp; 
+              <sup>4</sup>UMass Amherst&nbsp; &nbsp; 
+              <br>
+            </p>
+            <!-- <p> <sup>*</sup> equal contributions &nbsp;
+              <sup>†</sup> corresponding author &nbsp;
+              <br>
+            </p> -->
+            <!-- <p> <a class="btn btn-secondary btn-lg" href="" role="button">Paper</a> 
+                <a class="btn btn-secondary btn-lg" href="" role="button">Code</a> 
+                <a class="btn btn-secondary btn-lg" href="" role="button">Data</a> </p> -->
+
+            
+            <div class="row justify-content-center">
+              <div class="column">
+                  <p class="mb-5">
+                    <!-- <a class="btn btn-large btn-light" href="https://openaccess.thecvf.com/content/ICCV2023/papers/Zhao_TextPSG_Panoptic_Scene_Graph_Generation_from_Textual_Descriptions_ICCV_2023_paper.pdf" role="button" target="_blank"> -->
+                    <a class="btn btn-large btn-light" href="pdfs/TextPSG_paper.pdf" role="button" target="_blank">
+                    <i class="fa fa-file"></i> Paper </a> </p>
+              </div>
+              <div class="column">
+                <p class="mb-5">
+                  <a class="btn btn-large btn-light" href="pdfs/TextPSG_supp.pdf" role="button" target="_blank">
+                  <i class="fa fa-file"></i> Supplementary </a> </p>
+            </div>
+              <div class="column">
+                  <p class="mb-5"><a class="btn btn-large btn-light" href="https://github.com/chengyzhao/TextPSG" role="button" target="_blank">
+                <i class="fa fa-github-alt"></i> Code </a> </p>
+              </div>
+              <div class="column">
+                  <p class="mb-5"><a class="btn btn-large btn-light" href="https://github.com/chengyzhao/TextPSG" role="button" target="_blank">
+                <i class="fa fa-github-alt"></i> Data </a> </p>
+              </div>
+              <div class="column">
+                <p class="mb-5">
+                  <a class="btn btn-large btn-light" href="pdfs/TextPSG_poster.pdf" role="button" target="_blank">
+                  <i class="fa fa-file"></i> Poster </a> </p>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- teaser -->
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+            <hr style="margin-top:0px">
+              <div class="row justify-content-center" style="align-items:center; display:flex;">
+               <img src="images/teaser.png" alt="input" class="img-responsive graph" width="95%"/>
+              <br>
+              </div>
+            <p class="text-justify">
+              <b>Problem Overview.</b> Different from the traditional bbox-based form of the scene graph as shown in (a), Caption-to-PSG aims to 
+              generate the mask-based panoptic scene graph. In Caption-to-PSG, the model has no access to any location priors, explicit region-entity 
+              links, or pre-defined concept sets. Consequently, the model is required to learn partitioning and grounding as illustrated in (b), as 
+              well as object semantics and relation predicates as illustrated in (c), all purely from textual descriptions.
+            </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+  <br>
+
+  <!-- video -->
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2><strong>Video</strong></h2>
+            <hr style="margin-top:0px">
+            <div style="display: flex; justify-content: center;">
+              <iframe width="560" height="315" src="https://youtu.be/_ZjMXMKjm58" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+  <br>
+
+  <!-- abstract -->
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2><strong>Abstract</strong></h2>
+            <hr style="margin-top:0px">
+            <p class="text-justify">
+              Panoptic Scene Graph has recently been proposed for comprehensive scene understanding. However, previous works adopt a fully-supervised 
+              learning manner, requiring large amounts of pixel-wise densely-annotated data, which is always tedious and expensive to obtain. To 
+              address this limitation, we study a new problem of Panoptic Scene Graph Generation from Purely Textual Descriptions (Caption-to-PSG). 
+              The key idea is to leverage the large collection of free image-caption data on the Web alone to generate panoptic scene graphs. The 
+              problem is very challenging for three constraints: 1) no location priors; 2) no explicit links between visual regions and textual 
+              entities; and 3) no pre-defined concept sets. To tackle this problem, we propose a new framework TextPSG consisting of four modules, 
+              i.e., a region grouper, an entity grounder, a segment merger, and a label generator, with several novel techniques. The region grouper 
+              first groups image pixels into different segments and the entity grounder then aligns visual segments with language entities based on 
+              the textual description of the segment being referred to. The grounding results can thus serve as pseudo labels enabling the segment 
+              merger to learn the segment similarity as well as guiding the label generator to learn object semantics and relation predicates, 
+              resulting in a fine-grained structured scene understanding. Our framework is effective, significantly outperforming the baselines and 
+              achieving strong out-of-distribution robustness. We perform comprehensive ablation studies to corroborate the effectiveness of our 
+              design choices and provide an in-depth analysis to highlight future directions.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+  <br>
+
+  <!-- problem -->
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2><strong>Problem</strong></h2>
+            <hr style="margin-top:0px">
+              <p class="text-justify">
+                Panoptic Scene Graph Generation from <b>Purely</b> Textual Descriptions.
+                <br>
+                <br>
+                <b>"Purely" for Three Constraints: </b>
+                <br>
+                &#x2022; No location priors.
+                <br>
+                &#x2022; No explicit region-entity links.
+                <br>
+                &#x2022; No pre-defined concept sets.
+                <br>
+                <br>
+                <b>Two Key Challenges: </b>
+                <br>
+                &#x2022; Learning to the ground entities in language onto the visual scene, developing the ability to perform partitioning and grounding 
+                purely from textual descriptions.
+                <br>
+                &#x2022; Learning the object semantics and relation predicates from textual descriptions, without pre-defined fixed object and relation 
+                vocabularies.
+              </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+  <br>
+
+  <!-- framework -->
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2><strong>Framework</strong></h2>
+            <hr style="margin-top:0px">
+              <p class="text-justify">
+                <div class="row justify-content-center" style="align-items:center; display:flex;">
+                  <img src="images/framework.png" alt="input" class="img-responsive graph" width="95%"/>
+                </div>
+                &#x2022; <b>Region Grouper: </b> partitioning the image in a hierarchical way
+                <br>
+                &#x2022; <b>Entity Grounder: </b> grounding the textual entities onto the image segments through a fine-grained contrastive learning strategy
+                <br>
+                &#x2022; <b>Segment Merger: </b> leveraging the grounding results as explicit supervision to learn similarity matrices for inference-time merging
+                <br>
+                &#x2022; <b>Label Generator: </b> auto-regressive generation for prediction, leveraging the pre-learned common sense from the pre-trained language 
+                model, prompt-embedding-based technique (PET) to better incorporate the common sense
+              </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+  <br>
+
+  <!-- results -->
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2><strong>Results</strong></h2>
+            <hr style="margin-top:0px">
+              <h3 style="margin-top:20px; margin-bottom:20px; color:#717980"><b>Quantitative</b></h3>  
+              Our quantitative results on Caption-to-PSG are shown below. 
+              To make a fair comparison with bbox-based scene graphs generated by baselines, we evaluate our generated PSGs in both mask and bbox mode. 
+              For the latter, all masks in both prediction and ground truth are converted into bboxes (i.e., the mask area's enclosing rectangle) for 
+              evaluation, resulting in an easier setting than the former. The results show that our framework (<b>Ours</b>) significantly outperforms 
+              all the baselines under the same constraints on both PhrDet (14.37 vs. 3.71 N5R100) and SGDet (5.48 vs. 2.7 N5R100). Our method also shows 
+              better results compared with <b>SGGNLS-o</b> on all metrics and all tasks (on PhrDet, 14.37 vs. 7.93 N5R100; on SGDet, 5.48 vs. 5.02 N5R100) 
+              although <b>SGGNLS-o</b> utilizes location priors by leveraging a pre-trained detector. The results demonstrate that our framework is more 
+              effective for learning a good panoptic structured scene understanding.
+              <p class="text-justify">
+                <div class="row justify-content-center" style="align-items:center; display:flex;">
+                  <img src="images/results_main_quantitative.png" alt="input" class="img-responsive graph" width="95%"/>
+                </div>
+              </p>
+              <br>
+
+              <h3 style="margin-top:20px; margin-bottom:20px; color:#717980"><b>Qualitative</b></h3>  
+              We provide typical qualitative results below to further show our framework's effectiveness.
+              Compared with <b>SGGNLS-o</b>, our framework has the following advantages. 
+              First, our framework is able to provide fine-grained semantic labels to each pixel in the image to reach a panoptic understanding, while 
+              <b>SGGNLS-o</b> can only provide sparse bboxes produced by the pre-trained detector. Note that categories with irregular shapes (e.g., trees) 
+              are hard to be labeled precisely by bboxes. Second, compared with <b>SGGNLS-o</b>, our framework can generate more comprehensive object 
+              semantics and relation predicates, such as <i>"dry grass field"</i> and <i>"land at"</i>, showing the open-vocabulary potential of our framework. 
+              More qualitative results can be found in the supplementary material.
+              <p class="text-justify">
+                <div class="row justify-content-center" style="align-items:center; display:flex;">
+                  <img src="images/results_main_qualitative.png" alt="input" class="img-responsive graph" width="95%"/>
+                </div>
+              </p>
+              <br>
+
+              <h3 style="margin-top:20px; margin-bottom:20px; color:#717980"><b>Out-of-distribution (OOD) Robustness</b></h3>  
+              We further analyze another key advantage of our framework, i.e., the robustness in OOD cases.
+              Since <b>SGGNLS-c</b> and <b>SGGNLS-o</b> both rely on a pre-trained detector to locate objects, their performance highly depends on whether 
+              object semantics in the scene are covered by the detector. 
+              Based on the object semantics covered by the detector, we split the ground truth triplets into an in-distribution (ID) set and an OOD set. For 
+              triplets within the ID set, both the subject and object semantics are covered, while for triplets in the OOD set, at least one of the semantics 
+              is not covered.
+              As shown below, both <b>SGGNLS-c</b> and <b>SGGNLS-o</b> suffer a significant performance drop from the ID set to the OOD set. On the OOD set, 
+              the triplets can hardly be retrieved. However, our framework, with the ability of location learned from purely text descriptions, can reach similar 
+              performance on both sets, which demonstrates the OOD robustness of our framework for PSG generation.
+              <p class="text-justify">
+                <div class="row justify-content-center" style="align-items:center; display:flex;">
+                  <img src="images/results_ood.png" alt="input" class="img-responsive graph" width="55%"/>
+                </div>
+              </p>
+              <br>
+
+              <h3 style="margin-top:20px; margin-bottom:20px; color:#717980"><b>Application on Text-supervised Semantic Segmentation</b></h3>  
+              As a side product, we observe that our entity grounder and segment merger can also enhance TSSS. Based on the original GroupViT, we replace the 
+              multi-label contrastive loss with our entity grounder and segment merger. Then we finetune the model on the COCO Caption dataset.
+              As shown below, compared with GroupViT directly finetuned on the COCO Caption dataset, the explicit learning of merging in our modules can boost 
+              the model with an absolute 2.15% improvement of mean Intersection over Union (mIoU, %) on COCO, which demonstrates the effectiveness of our proposed 
+              modules on better object location.
+              <p class="text-justify">
+                <div class="row justify-content-center" style="align-items:center; display:flex;">
+                  <img src="images/results_sem_seg.png" alt="input" class="img-responsive graph" width="45%"/>
+                </div>
+              </p>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+  <br>
+
+  <!-- citing -->
+  <div class="container">
+    <div class="row ">
+      <div class="col-12">
+          <h2><strong>Citation</strong></h2>
+          <hr style="margin-top:0px">
+              <!-- <pre style="background-color: #e9eeef;padding: 1.25em 1.5em"> -->
+<pre style="background-color: #e9eeef;padding: 0 1.5em">
+<code>
+@InProceedings{Zhao_2023_ICCV,
+    author    = {Zhao, Chengyang and Shen, Yikang and Chen, Zhenfang and Ding, Mingyu and Gan, Chuang},
+    title     = {TextPSG: Panoptic Scene Graph Generation from Textual Descriptions},
+    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+    month     = {October},
+    year      = {2023},
+    pages     = {2839-2850}
+}
+</code>
+</pre>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+
+  <!-- Contact -->
+  <div class="container">
+    <div class="row ">
+      <div class="col-12">
+          <h2><strong>Contact</strong></h2>
+          <hr style="margin-top:0px">
+          <p>If you have any questions, please feel free to contact us:
+            <ul>
+              <li><b>Chengyang Zhao</b>&colon; zhaochengyang<span style="display:none">Prevent spamming</span>@<span style="display:none">Prevent spamming</span>pku.edu.cn </li>
+              <li><b>Zhenfang Chen</b>&colon; chenzhenfang2013<span style="display:none">Prevent spamming</span>@<span style="display:none">Prevent spamming</span>gmail.com </li>
+              <li><b>Chuang Gan</b>&colon; ganchuang1990<span style="display:none">Prevent spamming</span>@<span style="display:none">Prevent spamming</span>gmail.com </li>
+            </ul>
+          </p>
+      </pre>
+      </div>
+    </div>
+  </div>
+
+    <a href="https://hits.seeyoufarm.com">
+      <img id="myImage" src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fpku-epic.github.io%2FGAPartNet%2F&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false"/>
+      <script>
+        function hideImage() {
+            document.getElementById("myImage").style.display = "none";
+        }
+        window.onload = hideImage;
+        </script>
+    </a>
+
+  <footer class="text-center" style="margin-bottom:10px; font-size: medium;">
+      <hr>
+      Thanks to <a href="https://lioryariv.github.io/" target="_blank">Lior Yariv</a> for the <a href="https://lioryariv.github.io/idr/" target="_blank">website template</a>.
+  </footer>
+  <script>
+    MathJax = {
+      tex: {inlineMath: [['$', '$'], ['\\(', '\\)']],
+      macros: {
+        bm: ["{\\boldsymbol #1}",1],
+      }}
+    };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</body>
+</html>
